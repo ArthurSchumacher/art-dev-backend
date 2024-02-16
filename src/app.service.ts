@@ -26,7 +26,7 @@ export class AppService {
     const transport = this.mailTransport();
     const options: Mail.Options = {
       from,
-      to: this.configService.get<string>('DEFAULT_TO'),
+      to: [this.configService.get<string>('DEFAULT_TO')],
       subject,
       text,
     };
